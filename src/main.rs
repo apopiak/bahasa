@@ -1,7 +1,7 @@
 use std::io::stdin;
 use std::io::BufRead;
 
-mod bahasa;
+pub mod bahasa;
 use bahasa::vocabs::Vocabs;
 
 fn main() {
@@ -10,7 +10,7 @@ fn main() {
     println!(" ");
 
     let mut vocabs = Vocabs::new();
-    initializeVocabs(&mut vocabs);
+    initialize_vocabs(&mut vocabs);
 
     loop {
         let word = vocabs.get_random();
@@ -27,6 +27,7 @@ fn main() {
                 let st = vocab.unwrap();
                 if  *st == word {
                     println!("That's right! It's {}.", line_string);
+                    println!(" ");
                     break;
                 }
             }
@@ -36,10 +37,15 @@ fn main() {
     }
 }
 
-fn initializeVocabs(vocabs: &mut Vocabs) {
+fn initialize_vocabs(vocabs: &mut Vocabs) {
     vocabs.insert("satu", "one");
     vocabs.insert("dua", "two");
     vocabs.insert("tiga", "three");
-    vocabs.insert("enam", "four");
-    vocabs.insert("liga", "five");
+    vocabs.insert("empat", "four");
+    vocabs.insert("lima", "five");
+    vocabs.insert("enam", "six");
+    vocabs.insert("tujuh", "seven");
+    vocabs.insert("delapan", "eight");
+    vocabs.insert("sembilan", "nine");
+    vocabs.insert("sepuluh", "ten");
 }
