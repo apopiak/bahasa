@@ -41,4 +41,5 @@ fn initializeVocabs(vocabs: &mut Vocabs) {
     vocabs.insert("dua", "two");
     vocabs.insert("tiga", "three");
     vocabs.insert("enam", "four");
+    vocabs.insert("liga", "five");
 }
